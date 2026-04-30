@@ -1,41 +1,108 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html lang="es">
 <head>
-<title>Con Manos Mexicanas</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Con Manos Mexicanas</title><style>
 
-<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
 
 body{
-font-family:Arial;
-margin:0;
 background:#f5f1e8;
+color:#2d4739;
 }
 
 header{
 background:#355e3b;
-color:white;
 padding:20px;
-text-align:center;
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:white;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:bold;
 }
 
 .hero{
-background:#dfead7;
-padding:60px;
+height:80vh;
+background:url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1400&q=80');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.overlay{
+background:rgba(0,0,0,0.5);
+padding:40px;
+border-radius:20px;
+color:white;
+}
+
+.overlay h2{
+font-size:50px;
+margin-bottom:20px;
+}
+
+.overlay p{
+font-size:22px;
+margin-bottom:20px;
+}
+
+.btn{
+background:#355e3b;
+color:white;
+padding:15px 30px;
+border:none;
+border-radius:30px;
+font-size:18px;
+cursor:pointer;
+}
+
+.section{
+padding:80px 20px;
 text-align:center;
 }
 
 .products{
-display:flex;
-justify-content:center;
-gap:20px;
-padding:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
 }
 
 .card{
 background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-content{
 padding:20px;
-border-radius:10px;
-width:200px;
+}
+
+.price{
+font-size:22px;
+font-weight:bold;
+margin:15px 0;
 }
 
 footer{
@@ -45,60 +112,42 @@ text-align:center;
 padding:20px;
 }
 
-</style>
-
-</head>
-
-<body>
-
-<header>
-<h1>🌱 Con Manos Mexicanas</h1>
-</header>
-
-<section class="hero">
-
-<h2>Cultiva vida desde tu hogar</h2>
-
-<p>
-Kits de huerto casero con semillas mexicanas.
-</p>
-
-<button>
+</style></head><body><header><h1>🌱 Con Manos Mexicanas</h1><nav>
+<a href="#">Inicio</a>
+<a href="#">Productos</a>
+<a href="#">Nosotros</a>
+<a href="#">Contacto</a>
+</nav></header><section class="hero"><div class="overlay"><h2>
+Cultiva vida desde tu hogar
+</h2><p>
+Kits de huerto casero con semillas mexicanas y acompañamiento personalizado.
+</p><button class="btn">
 Comprar Ahora
-</button>
-
-</section>
-
-<section>
-
-<h2 style="text-align:center;">
+</button></div></section><section class="section"><h2>
 Nuestros Productos
-</h2>
-
-<div class="products">
-
-<div class="card">
-<h3>Kit Básico</h3>
-<p>$399 MXN</p>
-</div>
-
-<div class="card">
-<h3>Kit Premium</h3>
-<p>$699 MXN</p>
-</div>
-
-<div class="card">
-<h3>Hierbas Mexicanas</h3>
-<p>$499 MXN</p>
-</div>
-
-</div>
-
-</section>
-
-<footer>
+</h2><div class="products"><div class="card"><img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800&q=80"><div class="card-content"><h3>Kit Básico</h3><p>
+Ideal para comenzar tu huerto.
+</p><div class="price">
+$399 MXN
+</div><button class="btn">
+Agregar
+</button></div></div><div class="card"><img src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=800&q=80"><div class="card-content"><h3>Kit Premium</h3><p>
+Incluye herramientas y semillas premium.
+</p><div class="price">
+$699 MXN
+</div><button class="btn">
+Agregar
+</button></div></div><div class="card"><img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=800&q=80"><div class="card-content"><h3>Hierbas Mexicanas</h3><p>
+Cultiva cilantro y epazote.
+</p><div class="price">
+$499 MXN
+</div><button class="btn">
+Agregar
+</button></div></div></div></section><section class="section"><h2>
+Sobre Nosotros
+</h2><p>
+Con Manos Mexicanas busca reconectar a las personas con la naturaleza mediante huertos caseros ecológicos y sostenibles.
+</p></section><footer><p>
 © 2026 Con Manos Mexicanas
-</footer>
-
-</body>
+</p></footer></body>
 </html>
