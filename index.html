@@ -1,6 +1,11 @@
-<!DOCTYPE html><html lang="es"><head>
+<!DOCTYPE html>
+<html lang="es">
+<head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Con Manos Mexicanas</title><style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Con Manos Mexicanas</title>
+
+<style>
 
 *{
 margin:0;
@@ -112,12 +117,18 @@ background:white;
 padding:15px;
 border-radius:15px;
 box-shadow:0 0 10px gray;
-width:220px;
+width:250px;
 }
 
 #listaCarrito{
 margin-top:10px;
 padding-left:20px;
+}
+
+.total{
+margin-top:15px;
+font-size:20px;
+font-weight:bold;
 }
 
 footer{
@@ -128,56 +139,138 @@ padding:20px;
 margin-top:40px;
 }
 
-</style></head><body><header><h1>🌱 Con Manos Mexicanas</h1><nav>
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🌱 Con Manos Mexicanas</h1>
+
+<nav>
 <a href="#">Inicio</a>
 <a href="#">Productos</a>
 <a href="#">Nosotros</a>
 <a href="#">Contacto</a>
-</nav></header><section class="hero"><div class="overlay"><h2>
-Cultiva vida desde tu hogar
-</h2><p>
+</nav>
+</header>
+
+<section class="hero">
+<div class="overlay">
+
+<h2>Cultiva vida desde tu hogar</h2>
+
+<p>
 Kits de huerto casero con semillas mexicanas y acompañamiento personalizado.
-</p><button class="btn">
+</p>
+
+<button class="btn">
 Comprar Ahora
-</button></div></section><section class="section"><h2>
-Nuestros Productos
-</h2><div class="products"><div class="card"><img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800&q=80"><div class="card-content"><h3>Kit Básico</h3><p>
-Ideal para comenzar tu huerto.
-</p><div class="price">
-$399 MXN
-</div><button class="btn" onclick="agregarCarrito('Kit Básico')">
+</button>
+
+</div>
+</section>
+
+<section class="section">
+
+<h2>Nuestros Productos</h2>
+
+<div class="products">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<h3>Kit Básico</h3>
+<p>Ideal para comenzar tu huerto.</p>
+<div class="price">$399 MXN</div>
+
+<button class="btn" onclick="agregarCarrito('Kit Básico',399)">
 Agregar
-</button></div></div><div class="card"><img src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=800&q=80"><div class="card-content"><h3>Kit Premium</h3><p>
-Incluye herramientas y semillas premium.
-</p><div class="price">
-$699 MXN
-</div><button class="btn" onclick="agregarCarrito('Kit Premium')">
+</button>
+
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<h3>Kit Premium</h3>
+<p>Incluye herramientas y semillas premium.</p>
+<div class="price">$699 MXN</div>
+
+<button class="btn" onclick="agregarCarrito('Kit Premium',699)">
 Agregar
-</button></div></div><div class="card"><img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=800&q=80"><div class="card-content"><h3>Hierbas Mexicanas</h3><p>
-Cultiva cilantro y epazote.
-</p><div class="price">
-$499 MXN
-</div><button class="btn" onclick="agregarCarrito('Hierbas Mexicanas')">
+</button>
+
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+<h3>Hierbas Mexicanas</h3>
+<p>Cultiva cilantro y epazote.</p>
+<div class="price">$499 MXN</div>
+
+<button class="btn" onclick="agregarCarrito('Hierbas Mexicanas',499)">
 Agregar
-</button></div></div></div></section><section class="section"><h2>
-Sobre Nosotros
-</h2><p>
+</button>
+
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<h2>Sobre Nosotros</h2>
+
+<p>
 Con Manos Mexicanas busca reconectar a las personas con la naturaleza mediante huertos caseros ecológicos y sostenibles.
-</p></section><div id="carrito"><h3>🛒 Carrito</h3><ul id="listaCarrito">
-</ul></div><footer><p>
+</p>
+</section>
+
+<div id="carrito">
+<h3>🛒 Carrito</h3>
+
+<ul id="listaCarrito">
+</ul>
+
+<p class="total">
+Total: $<span id="total">0</span> MXN
+</p>
+</div>
+
+<footer>
+<p>
 © 2026 Con Manos Mexicanas
-</p></footer><script>
+</p>
+</footer>
 
-function agregarCarrito(nombre){
+<script>
 
-let lista = document.getElementById("listaCarrito");
+let total = 0;
 
-let producto = document.createElement("li");
+function agregarCarrito(nombre, precio){
 
-producto.innerHTML = nombre;
+let lista = document.getElementById('listaCarrito');
+
+let producto = document.createElement('li');
+
+producto.innerHTML = nombre + ' - $' + precio + ' MXN';
 
 lista.appendChild(producto);
 
+total += precio;
+
+document.getElementById('total').innerHTML = total;
+
 }
 
-</script></body></html>
+</script>
+
+</body>
+</html>
