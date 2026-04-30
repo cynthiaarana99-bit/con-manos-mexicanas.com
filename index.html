@@ -148,14 +148,14 @@ margin-top:40px;
 <h1>🌱 Con Manos Mexicanas</h1>
 
 <nav>
-<a href="#">Inicio</a>
-<a href="#">Productos</a>
-<a href="#">Nosotros</a>
-<a href="#">Contacto</a>
+<a href="#inicio">Inicio</a>
+<a href="#productos">Productos</a>
+<a href="#pago">Pago</a>
+<a href="#contacto">Contacto</a>
 </nav>
 </header>
 
-<section class="hero">
+<section class="hero" id="inicio">
 <div class="overlay">
 
 <h2>Cultiva vida desde tu hogar</h2>
@@ -171,7 +171,7 @@ Comprar Ahora
 </div>
 </section>
 
-<section class="section">
+<section class="section" id="productos">
 
 <h2>Nuestros Productos</h2>
 
@@ -247,6 +247,44 @@ Total: $<span id="total">0</span> MXN
 Vaciar carrito
 </button>
 </div>
+
+<section class="section" id="pago">
+<h2>💳 Pantalla de Pago</h2>
+
+<div style="max-width:500px; margin:auto; background:white; padding:30px; border-radius:20px; box-shadow:0 0 10px gray;">
+
+<input type="text" placeholder="Nombre completo" style="width:100%; padding:15px; margin-bottom:15px; border-radius:10px; border:1px solid #ccc;">
+
+<input type="text" placeholder="Número de tarjeta" style="width:100%; padding:15px; margin-bottom:15px; border-radius:10px; border:1px solid #ccc;">
+
+<input type="text" placeholder="Fecha de vencimiento" style="width:100%; padding:15px; margin-bottom:15px; border-radius:10px; border:1px solid #ccc;">
+
+<input type="text" placeholder="CVV" style="width:100%; padding:15px; margin-bottom:15px; border-radius:10px; border:1px solid #ccc;">
+
+<button class="btn" onclick="alert('Pago realizado correctamente 🌱')">
+Pagar Ahora
+</button>
+
+</div>
+</section>
+
+<section class="section" id="contacto">
+<h2>📩 Formulario de Contacto</h2>
+
+<div style="max-width:500px; margin:auto; background:white; padding:30px; border-radius:20px; box-shadow:0 0 10px gray;">
+
+<input type="text" placeholder="Tu nombre" style="width:100%; padding:15px; margin-bottom:15px; border-radius:10px; border:1px solid #ccc;">
+
+<input type="email" placeholder="Tu correo" style="width:100%; padding:15px; margin-bottom:15px; border-radius:10px; border:1px solid #ccc;">
+
+<textarea placeholder="Escribe tu mensaje" style="width:100%; padding:15px; height:120px; margin-bottom:15px; border-radius:10px; border:1px solid #ccc;"></textarea>
+
+<button class="btn" onclick="alert('Mensaje enviado 🌿')">
+Enviar mensaje
+</button>
+
+</div>
+</section>
 
 <footer>
 <p>
