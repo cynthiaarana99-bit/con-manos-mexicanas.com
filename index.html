@@ -242,6 +242,10 @@ Con Manos Mexicanas busca reconectar a las personas con la naturaleza mediante h
 <p class="total">
 Total: $<span id="total">0</span> MXN
 </p>
+
+<button class="btn" onclick="vaciarCarrito()">
+Vaciar carrito
+</button>
 </div>
 
 <footer>
@@ -265,6 +269,16 @@ producto.innerHTML = nombre + ' - $' + precio + ' MXN';
 lista.appendChild(producto);
 
 total += precio;
+
+document.getElementById('total').innerHTML = total;
+
+}
+
+function vaciarCarrito(){
+
+document.getElementById('listaCarrito').innerHTML = '';
+
+total = 0;
 
 document.getElementById('total').innerHTML = total;
 
