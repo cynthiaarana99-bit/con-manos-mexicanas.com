@@ -1,1 +1,104 @@
-<!DOCTYPE html>\n<html lang=\"es\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Con Manos Mexicanas</title>\n\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap\" rel=\"stylesheet\">\n\n<style>\n*{\nmargin:0;\npadding:0;\nbox-sizing:border-box;\nfont-family:'Poppins',sans-serif;\n}\n\nbody{\nbackground:#f5f1e8;\ncolor:#2d4739;\n}\n\nheader{\nbackground:#355e3b;\npadding:20px;\ndisplay:flex;\njustify-content:space-between;\nalign-items:center;\nposition:sticky;\ntop:0;\n}\n\nheader h1{\ncolor:white;\n}\n\nnav a{\ncolor:white;\ntext-decoration:none;\nmargin-left:20px;\nfont-weight:bold;\n}\n\n.hero{\nheight:90vh;\nbackground:url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1400&q=80');\nbackground-size:cover;\nbackground-position:center;\ndisplay:flex;\njustify-content:center;\nalign-items:center;\ntext-align:center;\npadding:20px;\ncolor:white;\n}\n\n.overlay{\nbackground:rgba(0,0,0,0.5);\npadding:40px;\nborder-radius:20px;\n}\n\n.hero h2{\nfont-size:60px;\nmargin-bottom:20px;\n}\n\n.hero p{\nfont-size:22px;\nmargin-bottom:20px;\n}\n\n.btn{\nbackground:#355e3b;\ncolor:white;\npadding:15px 30px;\nborder:none;\nborder-radius:30px;\nfont-size:18px;\ncursor:pointer;\n}\n\n.section{\npadding:80px 30px;\ntext-align:center;\n}\n\n.section h2{\nfont-size:40px;\nmargin-bottom:40px;\n}\n\n.products{\ndisplay:grid;\ngrid-template-columns:repeat(auto-fit,minmax(280px,1fr));\ngap:30px;\n}\n\n.card{\nbackground:white;\nborder-radius:20px;\noverflow:hidden;\nbox-shadow:0 5px 20px rgba(0,0,0,0.1);\ntransition:0.3s;\n}\n\n.card:hover{\ntransform:translateY(-10px);\n}\n\n.card img{\nwidth:100%;\nheight:250px;\nobject-fit:cover;\n}\n\n.card-content{\npadding:20px;\n}\n\n.price{\nfont-size:24px;\nfont-weight:bold;\nmargin:15px 0;\n}\n\nfooter{\nbackground:#355e3b;\ncolor:white;\ntext-align:center;\npadding:30px;\n}\n\n.whatsapp{\nposition:fixed;\nbottom:20px;\nright:20px;\nbackground:#25D366;\ncolor:white;\npadding:15px 20px;\nborder-radius:50px;\ntext-decoration:none;\nfont-weight:bold;\n}\n\n@media(max-width:768px){\n.hero h2{\nfont-size:40px;\n}\n\nheader{\nflex-direction:column;\n}\n}\n\n</style>\n</head>\n\n<body>\n\n<header>\n<h1>🌱 Con Manos Mexicanas</h1>\n\n<nav>\n<a href=\"#\">Inicio</a>\n<a href=\"#productos\">Productos</a>\n<a href=\"#nosotros\">Nosotros</a>\n<a href=\"#contacto\">Contacto</a>\n</nav>\n</header>\n\n<section class=\"hero\">\n<div class=\"overlay\">\n<h2>Cultiva vida desde tu hogar</h2>\n<p>\nKits de huerto casero con semillas mexicanas y acompañamiento personalizado.\n</p>\n<button class=\"btn\">Comprar Ahora</button>\n</div>\n</section>\n\n<section class=\"section\" id=\"productos\">\n<h2>Nuestros Productos</h2>\n\n<div class=\"products\">\n\n<div class=\"card\">\n<img src=\"https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800&q=80\">\n\n<div class=\"card-content\">\n<h3>Kit Básico</h3>\n<p>Ideal para comenzar tu huerto.</p>\n<div class=\"price\">$399 MXN</div>\n<button class=\"btn\">Agregar</button>\n</div>\n</div>\n\n<div class=\"card\">\n<img src=\"https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=800&q=80\">\n\n<div class=\"card-content\">\n<h3>Kit Premium</h3>\n<p>Incluye herramientas y semillas premium.</p>\n<div class=\"price\">$699 MXN</div>\n<button class=\"btn\">Agregar</button>\n</div>\n</div>\n\n<div class=\"card\">\n<img src=\"https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=800&q=80\">\n\n<div class=\"card-content\">\n<h3>Hierbas Mexicanas</h3>\n<p>Cultiva cilantro y epazote.</p>\n<div class=\"price\">$499 MXN</div>\n<button class=\"btn\">Agregar</button>\n</div>\n</div>\n\n</div>\n</section>\n\n<section class=\"section\" id=\"nosotros\">\n<h2>Sobre Nosotros</h2>\n\n<p>\nCon Manos Mexicanas busca reconectar a las personas con la naturaleza mediante huertos caseros ecológicos y sostenibles.\n</p>\n</section>\n\n<section class=\"section\" id=\"contacto\">\n<h2>Contacto</h2>\n<p>📧 contacto@conmanosmexicanas.com</p>\n<p>📱 WhatsApp: 55 1234 5678</p>\n<p>📸 Instagram: @conmanosmexicanas</p>\n</section>\n\n<footer>\n<p>© 2026 Con Manos Mexicanas</p>\n</footer>\n\n<a class=\"whatsapp\" href=\"#\">\n💬 WhatsApp\n</a>\n\n</body>\n</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Con Manos Mexicanas</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#f5f1e8;
+}
+
+header{
+background:#355e3b;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+.hero{
+background:#dfead7;
+padding:60px;
+text-align:center;
+}
+
+.products{
+display:flex;
+justify-content:center;
+gap:20px;
+padding:40px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+width:200px;
+}
+
+footer{
+background:#355e3b;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>🌱 Con Manos Mexicanas</h1>
+</header>
+
+<section class="hero">
+
+<h2>Cultiva vida desde tu hogar</h2>
+
+<p>
+Kits de huerto casero con semillas mexicanas.
+</p>
+
+<button>
+Comprar Ahora
+</button>
+
+</section>
+
+<section>
+
+<h2 style="text-align:center;">
+Nuestros Productos
+</h2>
+
+<div class="products">
+
+<div class="card">
+<h3>Kit Básico</h3>
+<p>$399 MXN</p>
+</div>
+
+<div class="card">
+<h3>Kit Premium</h3>
+<p>$699 MXN</p>
+</div>
+
+<div class="card">
+<h3>Hierbas Mexicanas</h3>
+<p>$499 MXN</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Con Manos Mexicanas
+</footer>
+
+</body>
+</html>
